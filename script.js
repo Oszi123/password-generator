@@ -12,6 +12,31 @@ function randomInt(min, max) {
   return Math.floor(min *(1 - random) + random * max)
 }
 
+function getRandomItem(list) {
+  return list[randomInt(list.length)]
+}
+
+function generatePassword() {
+  var userInput = window.prompt("How long do you want your password to be?")
+  var passwordLength = parseInt(userInput)
+
+  // Invalid entry alerts
+
+  if (isNaN(passwordLength)) {
+    window.alert("That's not a number!")
+    return
+  } 
+
+  if (passwordLength < 8 || passwordLength > 128) {
+    window.alert("Password must be between 8 and 128 characters!")
+    return
+}
+// Prompts for user to select
+  var userWantsNumbers = window.confirm("Would you like to inculde numbers in your password?");
+  var userWantsUppercase = window.confirm("Would you like to inculde uppercase in your password?");
+  var userWantsLowercase = window.confirm("Would you like to inculde lowercase in your password?");
+  var userWantsSymbols = window.confirm("Would you like to inculde symbols in your password?");
+
 
 
 
@@ -24,4 +49,3 @@ function writePassword () {
 
 }
 generateBtn.addEventListener("click", writePassword);
-
