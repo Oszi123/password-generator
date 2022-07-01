@@ -67,7 +67,7 @@ function generatePassword() {
 choiceSet.push(uppercaseList)
   }
 
-// Password generation to display in text box
+// Password generation to display in text box 
 
   var generatedPassword = ""
   for (var i = 0; i < passwordLength; i++) {
