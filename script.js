@@ -36,7 +36,11 @@ function generatePassword() {
   var userWantsUppercase = window.confirm("Would you like to inculde uppercase in your password?");
   var userWantsLowercase = window.confirm("Would you like to inculde lowercase in your password?");
   var userWantsSymbols = window.confirm("Would you like to inculde symbols in your password?");
-
+// Arrays choices for user
+  var numberList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+  var symbolList = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "="]
+  var lowercaseList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+  var uppercaseList = []
 
 
 
