@@ -42,7 +42,42 @@ function generatePassword() {
   var lowercaseList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
   var uppercaseList = []
 
+// This is where users choices will be stored
 
+  var choiceSet =[]
+
+  for (var i = 0; i < lowercaseList.length; i++) {
+    uppercaseList[i] = lowercaseList[i].toUpperCase();
+  }
+  
+  if (userWantsNumbers === true) {
+  choiceSet.push(numberList)
+}
+  if (userWantsSymbols === true) {
+  choiceSet.push(symbolList)
+}
+  if (userWantsUppercase === true) {
+  choiceSet.push(uppercaseList)
+}
+  if (userWantsLowercase === true) {
+  choiceSet.push(lowercaseList)
+  }
+
+  if (choiceSet.length === 0) {
+choiceSet.push(uppercaseList)
+  }
+
+// Password generation to display in text box
+
+  var generatedPassword = ""
+  for (var i = 0; i < passwordLength; i++) {
+    var randomList = getRandomItem(choiceSet)
+    var randomChar = getRandomItem(randomList)
+    generatedPassword += randomChar
+
+  }
+  return generatedPassword 
+  }
 
 // Write password to the #password input
 function writePassword () {
