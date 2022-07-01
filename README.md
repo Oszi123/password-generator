@@ -1,4 +1,4 @@
-# challenge-3 PASSWORD GENERATOR
+# PASSWORD GENERATOR
 
 ## This project is a password generator that compiles random set of letters, numbers and characters for a secure password for the user to use.
 
@@ -7,3 +7,5 @@
 
 
 ## The languages used for this project were Html, CSS, and Javascript.
+
+![alt text](password-generator.png "Picture of password generator")
